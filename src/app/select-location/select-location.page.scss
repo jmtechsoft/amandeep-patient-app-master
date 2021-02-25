@@ -1,0 +1,29 @@
+ion-icon{
+    color: #3C3737;
+    
+}
+.title{
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+}
+.img-center{
+    text-align: center;
+    margin-top: 5%;
+    ion-label{
+        color: #272727;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+.footer{
+    text-align: center;
+    margin-top: 10%;
+}
+.next-btn{
+    --background: #363A61;
+    --background-activated:#363A61;
+    width: 40%;
+}

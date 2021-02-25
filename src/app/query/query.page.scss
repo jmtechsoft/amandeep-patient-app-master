@@ -1,0 +1,44 @@
+
+:host {
+    ion-icon{
+        color: #3C3737;
+        
+    }
+    .title{
+        color: #272727;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    
+    .header-ios ion-toolbar:last-of-type {
+        --border-width: 0 0 0px;
+    }
+    .title-col{
+        padding: 15px;
+    }
+    .title-input{
+        border: 1px solid #ADADAD;
+        color: #ADADAD;
+        --padding-start: 10px;
+        font-size: 14px;
+        height: 45px;
+    }
+    .query-col{
+        padding: 15px;   
+        margin-top: -15px;
+        ion-textarea{
+            border: 1px solid #ADADAD;
+            color: #ADADAD;
+            --padding-start: 10px;
+            font-size: 14px;
+            height: 350px;
+        }
+    }
+    .submit-btn{
+        --background: red;
+        width: 120px;
+        height: 40px;
+        font-family: sans-serif;
+    }
+
+}

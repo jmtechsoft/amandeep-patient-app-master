@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">My Reports</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addreport()">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-row class="video-row" *ngFor="let r of reports">
+    <ion-col size="2" class="container">
+      <img src='assets/imgs/pdf.png' *ngIf="r.type == 'pdf'"/>
+      <img src='{{r.report}}' *ngIf="r.type == 'jpeg'"/>
+    </ion-col>
+
+    <ion-col size="4" class="video">
+      <h6 class="title">{{r.description}}</h6>
+      <p class="date">Date: {{r.created_at | date : 'mediumDate'}}</p>
+    </ion-col>
+    <ion-col size="4" class="video">
+      <h6 class="type">Type : <span style="text-transform: uppercase;">{{r.type}}</span></h6>
+      <p class="date">Time :  {{r.created_at | date : 'shortTime'}}</p>
+    </ion-col>
+    <ion-col size="1" (click)="downloadReport(r.report)">
+      <ion-icon class="download-icon" name="cloud-download-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

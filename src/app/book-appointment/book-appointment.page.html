@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title" *ngIf="book_type == 'OPD'">Book OPD Appointment</ion-title>
+    <ion-title class="title" *ngIf="book_type == 'videocall'">Book Video Consultation</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list lines="none">
+    <ion-item class="lower-bottom" *ngFor="let d of doctors" (click)="bookAppointment(d)">
+      <ion-avatar slot="start">
+        <img src="assets/imgs/no-profile.png" *ngIf="d.profile_picture == null">
+        <img src="{{d.profile_picture}}" *ngIf="d.profile_picture != null">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="doctor-name">Dr. {{d.firstname}} {{d.lastname}} </h2>
+        <p>{{speciality_name}}</p>
+        <!-- <p>Exp: 36 yrs.</p> -->
+      </ion-label>
+      <div>
+        <ion-label slot="end" class="book-btn" >
+          <img src="assets/imgs/book.png">
+        </ion-label>
+      </div>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

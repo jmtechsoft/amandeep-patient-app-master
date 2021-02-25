@@ -1,0 +1,61 @@
+ion-icon{
+    color: #3C3737;
+    
+}
+.title{
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+.doctor-name{
+    color: #272727;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+p{
+    font-family: sans-serif;
+    white-space: normal;
+    font-size: 12px;
+}
+.book-btn{
+    margin: 0;
+    margin-top: -20px;
+    img{
+        float: right;
+    }
+}
+.map-icon{
+    color: #363A61;
+    float: right;
+    font-size: 20px;
+}
+.lower-bottom{
+    border-bottom: 1px solid #ADADAD;
+    margin-left: 10px;
+    margin-right: 10px;
+    ion-avatar{
+        margin-left: -10px;
+    }
+}
+.pending{
+    float: right;
+    background: green;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.completed{
+    float: right;
+    background: #363A61;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.cancel{
+    float: right;
+    background: red;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}

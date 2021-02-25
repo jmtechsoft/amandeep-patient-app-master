@@ -1,0 +1,142 @@
+ion-icon {
+    color: #3C3737;
+
+}
+
+.title {
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.doctor-name {
+    color: #272727;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+    white-space: nowrap;
+    font-size:12px;
+}
+ion-label{
+     font-family: sans-serif;
+     
+    white-space: normal;
+    font-size: 12px;
+
+}
+
+.book-btn {
+    margin: 0;
+    margin-top: -20px;
+
+    img {
+        float: right;
+    }
+}
+
+.lower-bottom {
+    border-bottom: 2px solid #ADADAD;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    ion-avatar {
+        margin-left: -10px;
+    }
+}
+
+.lower-bottom-2 {
+    border-bottom: 1px solid #ADADAD;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.faq-item {
+    border-bottom: 0.55px solid #c8c7cc;
+}
+
+.question {
+    padding: 8px 0px;
+    font-weight: 700;
+}
+
+.no-data {
+    border-top: none !important;
+    border-bottom: none !important;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 7px;
+    transition: 0.4s;
+
+    ion-icon {
+        float: right;
+    }
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    /* display: none;*/
+    background-color: white;
+    overflow: hidden;
+}
+
+.time-slot {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+.choose-time{
+    text-align: center;
+    background: #E80C0A;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.other-time{
+    text-align: center;
+    background:#363A61;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.book-via-app{
+        margin-right: 23px;
+         --background: #363A61;
+         --background-activated:#363A61;
+
+}
+.book-via-call{
+    --background: #E80C0A;
+}
+ion-calendar ion-calendar-month .primary .days-box .days .today p{
+    color: red !important;
+}
+.available-slots{
+    font-weight: bold;
+    margin: 0;
+    float: right;
+}

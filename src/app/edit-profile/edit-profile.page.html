@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Edit Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="editProfile()">
+        Save
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row class="profile-img">
+    <ion-col size="12" (click)="getPicture()">
+      <img src="{{utility.user_profile}}" />
+    </ion-col>
+  </ion-row>
+  <div class="initial-container">
+    <ion-row class="header-values">
+      <ion-col size="12" class="header-values">
+        <ion-label class="title">Name</ion-label>
+        <ion-input [(ngModel)]="name"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="header-values-2">
+        <ion-label class="title">Gender</ion-label>
+        <ion-select placeholder="" [(ngModel)]="gender">
+          <ion-select-option value="0">Female</ion-select-option>
+          <ion-select-option value="1">Male</ion-select-option>
+          <ion-select-option value="2">Other</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col size="4" class="header-values-2" style="margin-left: 45px;">
+        <ion-label class="title">Date Of Birth</ion-label>
+        <ion-datetime displayFormat="MMM D YYYY" [(ngModel)]="dob" [max]="selectCurrentDate()"></ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="header-values-2">
+        <ion-label class="title">Marital Status</ion-label>
+        <ion-select placeholder="" [(ngModel)]="marital_status">
+          <ion-select-option value="0">Single</ion-select-option>
+          <ion-select-option value="1">Married</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col size="4" class="header-values-2" style="margin-left: 45px;">
+        <ion-label class="title">Guardian Name</ion-label>
+        <ion-textarea [(ngModel)]="gaurdian_name" style="margin-left: 1px;height: 40px;"></ion-textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="header-values-2">
+        <ion-label class="title">Mobile Number</ion-label>
+        <p class="value" style="white-space: nowrap;" *ngIf="utility.user.type ==1">+91 {{mobile_no}}</p>
+        <ion-input *ngIf="utility.user.type !=1" type="text" (keypress)="onKeyPress($event)" pattern="[0-9]" inputmode="numeric" maxlength="10" decimal="true" [(ngModel)]="mobile_no" style="margin-left: 1px;"></ion-input>
+     
+      </ion-col>
+      <ion-col size="4" class="header-values-2" style="margin-left: 45px;">
+        <ion-label class="title">Emergency No</ion-label>
+        <ion-input type="text" (keypress)="onKeyPress($event)" pattern="[0-9]" inputmode="numeric" maxlength="10" decimal="true" [(ngModel)]="emergency_number" style="margin-left: 1px;"></ion-input>
+        <!-- <ng-numeric-input [layout]="'tel'"  [(ngModel)]="emergency_number"></ng-numeric-input> -->
+      </ion-col> 
+    </ion-row>
+  </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-content padding>
+  <ion-row style="margin-top: 20px;">
+    <ion-col size="12">
+      <ion-label class="label">Card Holder Name</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-input class="input-box" placeholder="Name" [(ngModel)]="name"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-label class="label">Card Number<img src="assets/imgs/cards.jpg" /></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="width: 93%;">
+    <ion-col size="12" class="card-number">
+      <ng-numeric-input [layout]="'tel'" [entertext]="'OK'" [placeholder]="'XXXX-XXXX-XXXX-XXXX'" [disabled]="false"
+        [(ngModel)]="number" [maxlength]="10">
+      </ng-numeric-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <ion-label class="label">Cvv</ion-label>
+    </ion-col>
+    <ion-col size="6">
+      <ion-label class="label">Expiry Date</ion-label></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <div class="cvv-number">
+        <ng-numeric-input [layout]="'tel'" [entertext]="'OK'" [placeholder]="'123'" [disabled]="false" [(ngModel)]="cvv"
+          [maxlength]="10">
+        </ng-numeric-input>
+      </div>
+    </ion-col>
+    <ion-col size="6">
+      <ion-datetime placeholder="12/2020" class="input-box" displayFormat="MM/YYYY" [(ngModel)]="expiry_date"
+        min="2020-11-31" max="2054">
+      </ion-datetime>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer style="height: 48px;">
+  <ion-row>
+    <ion-col size="5.5" style="padding: 0;">
+      <ion-button style="--background:linear-gradient(to right, #C23F3A , #E80C0A);--background-activated:#E80C0A;width: 100%;
+      margin-left: 0px;" expand="full" (click)="dismiss()" class="ion-activatable ripple-parent">CANCEL</ion-button>
+    </ion-col>
+    <ion-col size="6.5" style="padding: 0;">
+      <ion-button style="--background:#363A61;--background-activated:#363A61;width: 100%;
+      margin-left: 0px;" expand="full" (click)="payNow()" class="ion-activatable ripple-parent">PAY NOW
+        (<span>&#8377;</span>500)</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

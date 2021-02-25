@@ -1,0 +1,366 @@
+ion-icon {
+    color: #3C3737;
+
+}
+
+.title {
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.doctor-name {
+    color: #272727;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.date-icon {
+    color: #363A61;
+    margin-right: 8px;
+    margin-left: -12px;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.location-icon {
+    color: #363A61;
+    margin-right: 8px;
+    margin-left: -12px;
+    font-size: 20px;
+    margin-top: -12px;
+}
+
+ion-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.date-time-val {
+    margin-left: 10px;
+    margin-top: -11px;
+    font-size: 15px;
+    white-space: normal;
+}
+
+.time-date {
+    color: #272727;
+    font-family: sans-serif;
+    margin-bottom: 0;
+    margin-top: 5px;
+
+    .time-1 {
+        color: #272727;
+        font-size: 15px;
+    }
+
+    .time-2 {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+}
+
+.location {
+    color: #272727;
+    font-family: sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .location-1 {
+        color: #272727;
+        font-size: 15px;
+    }
+
+    .location-2 {
+        font-size: 12px;
+        padding-top: 5px;
+        white-space: normal;
+    }
+}
+
+.view-map {
+    color: rgb(0, 0, 0, 0.4);
+    font-family: sans-serif;
+    float: right;
+    font-size: 12px;
+}
+
+.fee {
+   border-left: 1px solid #ADADAD; 
+    padding-left: 10px
+}
+
+p {
+    font-family: sans-serif;
+    white-space: nowrap;
+    color: rgb(0, 0, 0, 0.4);
+}
+
+ion-label {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.book-btn {
+    margin: 0;
+    margin-top: -20px;
+
+    img {
+        float: right;
+    }
+}
+
+.lower-bottom {
+    border-bottom: 2px solid #ADADAD;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    ion-avatar {
+        margin-left: -10px;
+    }
+}
+
+.lower-bottom-2 {
+    border-bottom: 1px solid #272727;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.faq-item {
+    border-bottom: 0.55px solid #c8c7cc;
+}
+
+.question {
+    padding: 8px 0px;
+    font-weight: 700;
+}
+
+.no-data {
+    border-top: none !important;
+    border-bottom: none !important;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 7px;
+    transition: 0.4s;
+
+    ion-icon {
+        float: right;
+    }
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    /* display: none;*/
+    background-color: white;
+    overflow: hidden;
+}
+
+.time-slot {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+
+.choose-time {
+    text-align: center;
+    background: #E80C0A;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.other-time {
+    text-align: center;
+    background: #363A61;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.book-via-app {
+    margin-right: 23px;
+    --background: #363A61;
+
+}
+
+.book-relative {
+    background: #363A61;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    font-weight: bold;
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.book-self {
+    background: red;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    font-weight: bold;
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.book-for {
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.book-row{
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+ion-card{
+    margin-left: 0;
+    margin-right: 10px;
+
+}
+ion-card-subtitle{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #272727;
+    border-bottom: 1px solid #272727;
+    height: 32px;
+    font-weight: 100;
+}
+ion-card-content{
+    ion-label{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #272727;
+    font-weight: 100;
+    }
+}
+ion-checkbox{
+    width: 20px;
+    height: 20px;
+}
+.pay-now{
+    background: red;
+    font-weight: bold;
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.booking-for{
+    
+    margin-top: -10px;
+    margin-left: -20px;
+
+}
+
+.logo{
+    text-align: center;
+    margin-top: 40px;
+    img{
+        width: 100px;
+    }
+}
+.title{
+    font-weight: 100;
+}
+.logo-text{
+    text-align: center;
+    font-family: sans-serif;
+    h6{
+        color: #222C3C;
+    }
+}
+.phone-number{
+    color: #6C6969;
+    font-family: sans-serif;
+    padding-left: 20px;
+    margin-top: 10px;
+   
+    ion-label{
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+}
+.call-icon{
+    margin-top: 8px !important;
+    margin-left: -20px;
+    color: #6C6969;
+}
+.dial-code{
+    padding-left: 10px;
+    color: #ADADAD;
+    margin-top: 7px;
+    margin-left: 3px;
+    ion-label{
+     border-right: 1px solid;
+     /* margin-right: 11px; */
+     padding-right: 4px;
+     font-size: 12px;
+     
+    }
+ }
+.lower-bottom{
+    border-bottom: 1px solid #ADADAD;
+    // height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+
+
+ion-select {
+    min-width: 100vw;
+  }
+  .sign-up-col{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sign-up{
+    color: #6C6969;
+    font-family: sans-serif;
+  }
+  .header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+ion-icon{
+    color: #3C3737;
+    
+}
+.relative_name{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: sans-serif;
+}

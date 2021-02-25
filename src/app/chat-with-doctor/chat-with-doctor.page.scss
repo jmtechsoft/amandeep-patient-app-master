@@ -1,0 +1,152 @@
+
+:host {
+    ion-icon{
+        color: #3C3737;
+        
+    }
+    .title{
+        color: #272727;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    
+    .header-ios ion-toolbar:last-of-type {
+        --border-width: 0 0 0px;
+    }
+    .title-col{
+        padding: 15px;
+        text-align: center;
+        ion-label{
+            color: #272727;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+        img{
+            border: 2px solid green;
+            border-radius: 100px;
+            height: 50px;
+            width: 100%;
+        }
+    }
+    .title-input{
+        border: 1px solid #ADADAD;
+        color: #ADADAD;
+        --padding-start: 10px;
+        font-size: 14px;
+        height: 45px;
+    }
+    .query-col{
+        padding: 15px;   
+        margin-top: -2px;
+        ion-textarea{
+            border: 1px solid #ADADAD;
+            color: #ADADAD;
+            --padding-start: 10px;
+            font-size: 14px;
+            height: 230px;
+        }
+        ion-label{
+            color: #272727;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+    }
+    .submit-btn{
+        --background: red;
+        width: 50%;
+        height: 40px;
+        font-family: sans-serif;
+    }
+    
+    .title-row{
+        border-bottom: 1px solid #ADADAD;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .select-person{
+        padding: 10px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        ion-label{
+            color: #272727;
+            font-family: sans-serif;
+            font-size: 12px;
+            background: #F0F0F0;
+            padding: 6px;
+            border-radius: 5px;
+            padding-right: 145px;
+
+        }
+    }
+    .add-person{
+        text-align: center;
+        
+        ion-icon{
+            color: #363A61;
+            font-size: 20px;
+            border: 1px solid #ADADAD;
+            border-radius: 100px;
+            padding: 15px;
+            margin-top: 8px;
+        }
+        ion-label{
+            color: #272727;
+            font-family: sans-serif;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+      
+    }
+
+    ion-select{
+        background: #F0F0F0;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.phone-number{
+    color: #6C6969;
+    font-family: sans-serif;
+    padding-left: 20px;
+    margin-top: 10px;
+   
+    ion-label{
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+}
+.call-icon{
+    margin-top: 8px !important;
+    margin-left: -20px;
+    color: #6C6969;
+}
+.dial-code{
+    padding-left: 10px;
+    color: #ADADAD;
+    margin-top: 7px;
+    margin-left: 3px;
+    ion-label{
+     border-right: 1px solid;
+     /* margin-right: 11px; */
+     padding-right: 4px;
+     font-size: 12px;
+     
+    }
+ }
+.lower-bottom{
+    border-bottom: 1px solid #ADADAD;
+    // height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -5px;
+    margin-bottom: 5%;
+}
+
+ion-card-header{
+    border-bottom: 0.6px solid;
+    padding: 15px 13px;
+    font-weight: bold;
+}

@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="logo">
+      <img src="assets/imgs/logo.png">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="logo-text">
+      <h6>----------&nbsp;&nbsp;SIGN UP&nbsp;&nbsp;----------</h6>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" class="phone-number">
+      <ion-label>Name<span class="required-field">*</span></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="person-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-input placeholder="Enter your name" [(ngModel)]="name" (keypress)="onKeyPress($event)"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="phone-number">
+      <ion-label>Phone Number<span class="required-field">*</span></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="call-outline" style="font-size: 15px;"></ion-icon>
+    </ion-col>
+    <ion-col size="2" class="dial-code">
+      <ion-label>+91</ion-label>
+    </ion-col>
+    <ion-col size="5" style="margin-left: -18px;margin-top: 2px;">
+      <!-- <ion-input  [maxlength]="10" type="tel" placeholder="Contact Number" [(ngModel)]="mobile_no"></ion-input> -->
+      <ng-numeric-input [layout]="'tel'" [entertext]="'OK'" [placeholder]="'Contact Number'" [disabled]="false"
+        [(ngModel)]="mobile_no" [maxlength]="10">
+      </ng-numeric-input>
+    </ion-col>
+    <!-- <ion-col size="2" class="dial-code">
+      <ion-label>+91</ion-label>
+    </ion-col>
+    <ion-col size="6" style="margin-left: -17px;">
+      <ion-input type="tel" placeholder="Contact Number" style="--padding-top: 4px;" [(ngModel)]="mobile_no"></ion-input>
+
+    </ion-col> -->
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="phone-number">
+      <ion-label>Email Address</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="mail-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+
+    <ion-col size="8">
+      <ion-input type="email" placeholder="Enter your email" [(ngModel)]="email_id"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="phone-number">
+      <ion-label>Password<span class="required-field">*</span></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="lock-closed-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+
+    <ion-col size="6">
+      <ion-input minlength="8" maxlength="16" type="password" placeholder="Enter your password" [(ngModel)]="password">
+      </ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding: 40px;">
+    <ion-col>
+      <ion-button style="--background:linear-gradient(to right, #C23F3A , #E80C0A);--padding-bottom: 25px;
+      --padding-top: 25px;--background-activated:#E80C0A" shape="round" expand="full" (click)="signup()"
+        class="ion-activatable ripple-parent">Sign Up</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Chat With Doctor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col size="12" class="select-person">
+      <ion-label>Select Person for Consultation</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="title-row">
+    <ion-col size="3" class="title-col" (click)="chooseSelf()" *ngIf="book_for == 'self'">
+      <img src="{{utility.image}}" /><br>
+      <ion-label>Myself</ion-label>
+    </ion-col>
+    <ion-col size="3" class="title-col" (click)="chooseSelf()" *ngIf="book_for == 'relative'">
+      <img src="{{utility.image}}" style="border: 1px solid #ADADAD;"/><br>
+      <ion-label>Myself</ion-label>
+    </ion-col>
+    <ion-col size="3" class="add-person" (click)="chooseRelative()"  *ngIf="patient_name != undefined && book_for == 'self'">
+      <ion-icon name="add-outline"></ion-icon>
+      <ion-label>Someone else</ion-label>
+     </ion-col>
+    <ion-col size="3" class="add-person" (click)="chooseRelative()" *ngIf="patient_name != undefined && book_for == 'relative'">
+      <ion-icon name="checkmark"  style="color: #363A61"  style="border: 2px solid green;" ></ion-icon>
+      <br>
+      <ion-label *ngIf="patient_name != ''">{{patient_name}}</ion-label>
+      <ion-label *ngIf="patient_name == ''">Someone Else</ion-label>
+    </ion-col>
+  </ion-row>
+  <ng-container *ngIf="show_patient_form">
+    <ion-card>
+      <ion-card-header>
+        Fill Patient Details:
+      </ion-card-header>
+      <ion-row class="header-title">
+        <ion-col size="12" class="phone-number">
+          <ion-label>Name</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="lower-bottom">
+        <ion-col size="1" class="phone-number call-icon" style="margin-top: 6px !important;">
+          <ion-icon name="person-outline" style="color: #6C6969;"></ion-icon>
+        </ion-col>
+        <ion-col size="6" style="margin-left: 15px;margin-top: -2px;">
+          <ion-input type="text" placeholder="Patient Name" [(ngModel)]="name"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="header-title">
+        <ion-col size="12" class="phone-number">
+          <ion-label>Phone Number</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="lower-bottom">
+        <ion-col size="1" class="phone-number call-icon">
+          <ion-icon name="call-outline" style="color: #6C6969;font-size: 15px;"></ion-icon>
+        </ion-col>
+        <ion-col size="2" class="dial-code">
+          <ion-label>+91</ion-label>
+        </ion-col>
+        <ion-col size="6" style="margin-left: -12px;">
+          <!-- <ion-input placeholder="Contact Number"  (keypress)="numberOnlyValidation($event)" type="text" inputmode="numeric" maxlength="10"  [(ngModel)]="mobile_no"></ion-input>
+         -->
+          <ng-numeric-input [layout]="'tel'" [entertext]="''" [placeholder]="'Contact Number'" [disabled]="false"
+            [(ngModel)]="mobile_no" [maxlength]="10">
+          </ng-numeric-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="header-title">
+        <ion-col size="12" class="phone-number">
+          <ion-label>Age</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="lower-bottom">
+        <ion-col size="1" class="phone-number call-icon" style="margin-top: 3px !important;">
+          <ion-icon name="calendar-outline" style=" color: #6C6969;"></ion-icon>
+        </ion-col>
+        <ion-col size="6" style="margin-left:15px;margin-top: -4px;">
+          <!-- <ion-input maxlength="1" type="tel" placeholder="Patient Age" [(ngModel)]="age"></ion-input> -->
+          <ng-numeric-input [layout]="'tel'" [entertext]="''" [placeholder]="'Patient Age'" [disabled]="false"
+            [(ngModel)]="age" maxlength="2">
+          </ng-numeric-input>
+        </ion-col>
+      </ion-row>
+      <ion-row style="padding: 0 40px 9px;">
+        <ion-col>
+          <ion-button style="--background:linear-gradient(to right, #C23F3A , #E80C0A);--padding-bottom: 25px;
+          --padding-top: 25px;--background-activated:#E80C0A" shape="round" expand="full" (click)="addPatient()"
+            class="ion-activatable ripple-parent">Add Patient</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ng-container>
+  <ion-row class="title-row">
+    <ion-col size="12">
+      <ion-select placeholder="Select Doctor"  interface="alert" [(ngModel)]="doctor_id">
+        <ng-container *ngFor="let d of utility.all_doctors; let i = index">
+          <ion-select-option value="{{d.id}}">Dr.{{d.firstname}} {{d.lastname}}({{d.speciality_name}})
+          </ion-select-option>
+        </ng-container>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="query-col">
+      <ion-label>Enter your health query</ion-label>
+    </ion-col>
+    <ion-col size="12" class="query-col" style="margin-top: -15px;">
+      <ion-textarea placeholder="Please type your health query here....." [(ngModel)]="health_query"></ion-textarea>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" style="text-align:center">
+      <ion-button ion-button (click)="payNow()" class="submit-btn">PAY NOW</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+<!-- <ion-footer style="text-align: center;">
+  <ion-col size="12" style="text-align:center">
+    <ion-button ion-button (click)="payNow()" class="submit-btn">PAY NOW</ion-button>
+  </ion-col>
+</ion-footer> -->

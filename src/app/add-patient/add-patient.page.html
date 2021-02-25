@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Add Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="logo">
+      <img src="assets/imgs/logo.png">
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="header-title">
+    <ion-col size="12" class="phone-number">
+      <ion-label>Name</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon" style="margin-top: 6px;">
+      <ion-icon name="person-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+
+    <ion-col size="6" style="margin-left: 15px;">
+      <ion-input placeholder="Patient Name"  [(ngModel)]="name"></ion-input>
+    </ion-col>
+  </ion-row>
+ 
+  <ion-row class="header-title">
+    <ion-col size="12" class="phone-number">
+      <ion-label>Gender</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="12" style="margin-left:0px;" class="sign-up">
+      <input  [(ngModel)]="gender" type="radio" id="male" name="gender" value="1">&nbsp;
+      <label for="male" style="font-size:12px">Male</label>&nbsp;&nbsp;
+      <input   [(ngModel)]="gender"type="radio" id="male" name="gender" value="0">&nbsp;
+      <label for="male" style="font-size:12px">Female</label>&nbsp;&nbsp;
+      <input  [(ngModel)]="gender" type="radio" id="male" name="gender" value="2">&nbsp;
+      <label for="male" style="font-size:12px">Other</label>&nbsp;&nbsp;
+    </ion-col>
+  </ion-row>
+  <ion-row class="header-title">
+    <ion-col size="12" class="phone-number">
+      <ion-label>Phone Number</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="call-outline" style=" color: #3C3737;font-size: 15px;"></ion-icon>
+    </ion-col>
+    <ion-col size="2" class="dial-code">
+      <!-- <ion-select placeholder="" value="91" interface="popover" class="dial-code" appNoArrow>
+        <ion-select-option value="{{c.countryCodes[0]}}" *ngFor="let c of codes">+{{c.countryCodes[0]}}
+        </ion-select-option>
+      </ion-select> -->
+      <ion-label>+91</ion-label>
+    </ion-col>
+    <ion-col size="6" style="margin-left: -15px;margin-top: 2px;">
+      <ion-input placeholder="Contact Number" type="tel" [(ngModel)]="mobile_no"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="header-title">
+    <ion-col size="12" class="phone-number">
+      <ion-label>Email Address</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="mail-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+  
+    <ion-col size="6" style="margin-left: 15px;">
+      <ion-input type="email" placeholder="Enter your email" [(ngModel)]="email_id"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="header-title">
+    <ion-col size="12" class="phone-number">
+      <ion-label>Date of Birth</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="lower-bottom">
+    <ion-col size="1" class="phone-number call-icon">
+      <ion-icon name="calendar-outline" style=" color: #3C3737;"></ion-icon>
+    </ion-col>
+
+    <ion-col size="11" style="margin-left: -5px;">
+      <ion-datetime  [(ngModel)]="dob" placeholder="Enter Your DOB" displayFormat="MMM D, YYYY"
+          monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"></ion-datetime>
+      </ion-col>
+  </ion-row>
+  <ion-row style="padding: 40px;">
+    <ion-col>
+      <ion-button style="--background:linear-gradient(to right, #C23F3A , #E80C0A);--padding-bottom: 25px;
+      --padding-top: 25px;--background-activated:#E80C0A" shape="round" expand="full" (click)="submit()"
+        class="ion-activatable ripple-parent">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

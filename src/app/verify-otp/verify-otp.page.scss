@@ -1,0 +1,47 @@
+ion-icon{
+    color: #3C3737;
+    
+}
+.title{
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+.password{
+    color: #6C6969;
+    font-family: sans-serif;
+}
+.pass-col{
+    padding-left: 25px;
+    margin-top: 50px;
+}
+.footer-col{
+    margin-top: 50px;
+    text-align: center;
+}
+.input-col{
+    padding-left: 35px;
+}
+.lock{
+    font-size: 14px;
+}
+.first-box{
+    border-bottom: 1px solid #ADADAD;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.other-box{
+    border-bottom: 1px solid #ADADAD;
+    margin-right: 20px;
+}
+ion-item .ion-native .item-inner
+{
+    border:0px !important;
+}
+.otp-col{
+    margin-left: 20px;
+}

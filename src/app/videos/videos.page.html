@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Videos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="initial-container">
+    <ion-row class="video-row" *ngFor="let v of videos">
+      <ion-col size="4" class="container" (click)="playVideo(v.video_link)">
+        <img [src]='getIframeVideo(v.video_link)' />
+        <div class="centered"><img src='assets/imgs/play.png' /> </div>
+      </ion-col>
+
+      <ion-col size="6" class="video">
+        <h6 class="title">{{v.video_name}}</h6>
+        <!-- <p class="description" [innerHtml]="getDescription(v.description)"></p> -->
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>

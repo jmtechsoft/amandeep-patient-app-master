@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Add Reports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" class="description-col label">
+      <ion-label>Description</ion-label>
+    </ion-col>
+    <ion-col size="12" class="description-col" style="margin-top: 10px;">
+      <ion-textarea placeholder="Type your response here.." [(ngModel)]="description"></ion-textarea>
+    </ion-col>
+    <ion-col size="12" class="description-col label">
+      <ion-label>Upload Pictures (max 5)</ion-label>
+    </ion-col>
+
+    <ion-col size="3" class="description-col upload-col" (click)="getPicture('1')" *ngIf="report_1 == undefined">
+      <ion-icon name="cloud-upload-outline"></ion-icon>
+    </ion-col>
+
+    <ion-col size="3" class="description-img img-col" *ngIf="report_1 != undefined">
+      <img src="{{report_1}}"/>
+    </ion-col>
+    
+    <ion-col size="3" class="description-col upload-report extra-maegin-left" (click)="getPicture('2')" *ngIf="report_2 == undefined">
+      <ion-icon name="cloud-upload-outline"></ion-icon>
+     </ion-col>
+
+    <ion-col size="3" class="description-img img-col" *ngIf="report_2 != undefined" style="margin-left: 25px;">
+      <img src="{{report_2}}"/>
+    </ion-col>
+
+    <ion-col size="3" class="description-col upload-report extra-maegin-left" (click)="getPicture('3')" *ngIf="report_3 == undefined">
+      <ion-icon name="cloud-upload-outline" *ngIf="report_3 == undefined"></ion-icon>
+    </ion-col>
+
+    <ion-col size="3" class="description-img img-col" *ngIf="report_3 != undefined" style="margin-left: 22px;">
+      <img src="{{report_3}}"/>
+    </ion-col>
+
+
+    <ion-col size="3" class="description-col upload-col" (click)="getPicture('4')" *ngIf="report_4 == undefined">
+      <ion-icon name="cloud-upload-outline" *ngIf="report_4 == undefined"></ion-icon>
+    </ion-col>
+
+    <ion-col size="3" class="description-img img-col" *ngIf="report_4 != undefined">
+      <img src="{{report_4}}"/>
+    </ion-col>
+
+    <ion-col size="3" class="description-col upload-report extra-maegin-left" (click)="getPicture('5')" *ngIf="report_5 == undefined">
+      <ion-icon name="cloud-upload-outline" *ngIf="report_5 == undefined"></ion-icon>
+    </ion-col>
+
+    <ion-col size="3" class="description-img img-col" *ngIf="report_5 != undefined" style="margin-left: 25px;">
+      <img src="{{report_5}}"/>
+    </ion-col>
+
+  </ion-row>
+  <ion-row style="margin-top: 15px;">
+    <ion-col size="12" style="text-align:center">
+      <ion-button ion-button (click)="addReport()" class="submit-btn">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

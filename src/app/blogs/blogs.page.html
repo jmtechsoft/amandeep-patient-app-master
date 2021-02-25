@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Blogs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <iframe src="https://amandeephospital.org/blog.php/#mh-footer" style="border-radius: 0 !important; border: 0 !important;">
+  </iframe> -->
+  <ion-card *ngFor="let b of blogs; let i = index">
+    <ion-card-header>
+      <img src="{{b.image}}"/>
+      <ion-card-title>{{b.title}}</ion-card-title>
+      <ion-label>{{b.created_at | date : 'mediumDate'}}</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <p *ngIf="!b.full_text" [innerHTML]="b.description  | slice:0:150">
+      
+      </p>
+      <p *ngIf="b.full_text" [innerHTML]="b.description">
+      
+      </p>
+      <p *ngIf="!b.full_text" class="read-more" (click)="readMore(i)">
+        Read More
+      </p>
+      <p class="read-more" *ngIf="b.full_text" (click)="readLess(i)">
+        Read Less
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

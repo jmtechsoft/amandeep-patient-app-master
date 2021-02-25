@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-title class="title">Select Speciality</ion-title> -->
+    <ion-buttons slot="end">
+      <ion-button (click)="goToLocations()">
+        <ion-label class="title">{{location_name}}</ion-label>
+        <ion-icon name="location-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style=" background: #FAFAFA;">
+ <ion-grid>
+  <ion-row>
+    <ion-col size="12">
+      <ion-searchbar type="url" (ionInput)="search($event)" (ionBlur)="stopSearch()" placeholder="Search Speciality">
+      </ion-searchbar>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="speciality-box" size="5.5" *ngFor="let s of specialities"
+        (click)="selectSpeciality(s.speciality_name,s.speciality_id)">
+        <div class="img-div">
+          <img class="icon" [src]="getIcon(s.speciality_name)" />
+        </div>
+        <div class="title-div">
+          <p class="speciality-title-small"*ngIf="s.speciality_name.length < 20">{{s.speciality_name}}</p>
+          <p class="speciality-title-big" *ngIf="s.speciality_name.length > 20">{{s.speciality_name}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

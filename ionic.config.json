@@ -1,0 +1,13 @@
+{
+  "name": "patientapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/public/api",
+      "proxyUrl": "http://testing.isocare.in/public/api"
+    }
+  ]
+}

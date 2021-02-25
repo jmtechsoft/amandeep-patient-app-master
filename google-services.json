@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81335077066",
+    "project_id": "patient-290af",
+    "storage_bucket": "patient-290af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81335077066:android:2155b8b9996c600e524c33",
+        "android_client_info": {
+          "package_name": "amandeephospital.patientapp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81335077066-vgbirud43af2ub2cqeo005mkdh0b75g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk69QbupDa_rQcBSGjIfa_lw4plriTjpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81335077066-vgbirud43af2ub2cqeo005mkdh0b75g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

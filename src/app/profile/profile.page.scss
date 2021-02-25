@@ -1,0 +1,75 @@
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+.title{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.profile-img{
+    background: red;
+    padding: 12px;
+    ion-col{
+        text-align: center;
+    }
+    img{
+    border-radius: 50%;
+    width: 110px;
+    height: 100px;
+    }
+    ion-label{
+        color: white;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-transform: capitalize;
+    }
+ }
+
+ .initial-container {
+    background: url("/assets/imgs/Background.png");
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // padding: 16px;
+    height: 100%;
+  }
+ 
+  .header-title{
+      margin-left: 10px;
+      h6{
+        color: #363A61;
+        background: #E8E8E8;
+        float: left;
+        width: 94%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        font-family: sans-serif;
+      }
+  }
+  .header-values{
+    margin-left: 40px;
+    border-bottom: 1px solid #ADADAD;
+    height: 75px;
+      .title{
+        color: #272727; 
+        font-family: sans-serif;
+        white-space: nowrap;
+
+      }
+      .value{
+        color: #363A61;
+        font-family: sans-serif;
+        margin-top: 10px;
+        white-space: normal;
+        text-transform: capitalize;
+        /* font-size: 14px; */
+        width: 100%;
+      }
+  }
+  .header-values-2{
+      margin-top: 12px;
+  }

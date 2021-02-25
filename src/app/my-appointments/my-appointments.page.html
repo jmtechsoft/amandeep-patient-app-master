@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">My Appointments</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list lines="none">
+    <ion-item class="lower-bottom" *ngFor="let a of appointments">
+      <ion-avatar slot="start" style="margin-top: -50px;">
+        <img src="assets/imgs/no-profile.png" *ngIf="a['DR picture'] == null">
+        <img src="{{a['DR picture']}}" *ngIf="a['DR picture'] != null">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="doctor-name">Dr. {{a['DR firstname']}} {{a['DR lastname']}}
+          <ion-icon class="map-icon" name="map-outline" (click)="showMap(a.location_name,a.address)"></ion-icon>
+         </h2>
+        <p>{{a.speciality_name}}
+          <ion-icon class="map-icon" name="calendar-outline" *ngIf="a.type == 'OPD'"></ion-icon>
+          <ion-icon class="map-icon" (click)="videocall()" name="videocam-outline" *ngIf="a.type == 'Video'"></ion-icon>
+        </p>
+        <p style="margin-top: 10px;">{{a.time_slots}}, {{a.date | date : 'mediumDate'}}</p>
+        <p style="margin-top: 10px;">{{a.location_name}}{{a.address}}</p>
+        <p class="pending" *ngIf="a.appointment_status == 1">Pending</p>
+        <p class="completed" *ngIf="a.appointment_status == 2">Completed</p>
+        <p class="cancel" *ngIf="a.appointment_status == 0">Cancelled</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

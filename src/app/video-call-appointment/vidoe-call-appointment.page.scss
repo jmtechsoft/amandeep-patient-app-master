@@ -1,0 +1,40 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100%;
+  }
+  .bottom-right {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    width: 40%;
+    height: 40%;   
+ }  
+ .call-icon{
+    background-color: red;
+    padding-top: 27px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 100px;
+    ion-icon{
+        font-size: 30px;
+    }
+ }
+ .mute-icon{
+  background-color: #363A61;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 100px;
+   
+    ion-icon{
+        font-size: 30px;
+    }
+ }
+ .call-options{
+    text-align: center;
+    margin-top: 30px;
+ }

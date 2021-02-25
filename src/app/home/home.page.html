@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="4" class="header" (click)="openMenu()">
+        <ion-menu-button class="menu-icon"></ion-menu-button>
+      </ion-col>
+      <ion-col size="4" class="header">
+        <!-- <ion-icon name="home-outline" style="color: #E80C0A;"></ion-icon> -->
+        <img style="width: 25%;" src="assets/imgs/home.png" />
+      </ion-col>
+      <ion-col size="4" class="header" (click)="account()">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col size="4" class="header menu" (click)="openMenu()">
+        <ion-label style="color: #222428;">Menu</ion-label>
+      </ion-col>
+      <ion-col size="4" class="header other-header-icons">
+        <ion-label style="color: #E80C0A;">Home</ion-label>
+      </ion-col>
+      <ion-col size="4" class="header other-header-icons" (click)="account()">
+        <ion-label>Account</ion-label>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style=" background: #FAFAFA;">
+
+  <ion-row>
+    <ion-col size='12' class="banner">
+      <img src="assets/imgs/Home Banner.jpg" />
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" class="quick-menu">
+      <h3 style="font-weight: bold;">Quick Menu</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding: 10px;">
+    <ion-scroll scrollX="true">
+      <ion-col size="4" (click)="bookOPD()">
+        <img src="assets/imgs/book OPD.png" />
+        <p class="quick-menu-title" style="margin-left: -65px">Book OPD <br>Appointments</p>
+      </ion-col>
+      <ion-col size="4" (click)="bookVideoCall()">
+        <img src="assets/imgs/Video consultation.png" />
+        <p class="quick-menu-title" style="margin-left: -65px">Book Video<br> Consultations</p>
+      </ion-col>
+      <ion-col size="4" (click)="chatWithDoctor()">
+        <img src="assets/imgs/chat with doctor.png" />
+        <p class="quick-menu-title" style="margin-left: -65px">Chat With <br>Doctor</p>
+      </ion-col>
+      <!-- <ion-col size="4" (click)="myAppointments()">
+        <img src="assets/imgs/appoinments.png" style="margin-left: 20px;" />
+        <p class="quick-menu-title title_b">Appointments</p>
+      </ion-col> -->
+      <ion-col size="4">
+        <img src="assets/imgs/blogs.png" style="margin-left: 15px;" (click)="blogs()" />
+        <p class="quick-menu-title title_b" style="margin-left: -50px;">Blogs</p>
+      </ion-col>
+      <ion-col size="4" (click)="aboutUs()">
+        <img src="assets/imgs/about us.png" style="margin-left: 12px;" />
+        <p class="quick-menu-title title_b">About Us</p>
+      </ion-col>
+    </ion-scroll>
+  </ion-row>
+
+  <ion-row style="margin-top: -20px;">
+    <ion-col size="6" class="quick-menu">
+      <h3 style="font-weight: bold;">My Space</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding: 10px;margin-top: -25px;">
+    <ion-col>
+      <div class="container">
+        <div class="box">
+          <img src="assets/imgs/reports.png" (click)="myReports()" style="width: 20%;margin-left: -10px;" />
+          <p class="quick-menu-title title_b" style="margin-left: -50px;">Report</p>&nbsp;
+          <img src="assets/imgs/appoinments.png" style="margin-left: 12px;width: 20%;" (click)="myAppointments()" />
+          <p class="quick-menu-title title_b">Appointments</p>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="margin-top: 25px;">
+    <ion-col>
+      <div class="container">
+        <div class="box">
+          <img style="width: 65%;border-radius: 10px;border: 3px solid #F9F4F4;"
+            src="assets/imgs/emergency.png" />&nbsp;
+          <img style="width: 65%;border-radius: 10px;border: 3px solid #F9F4F4;"
+            src="assets/imgs/knee replacement.png" />&nbsp;
+          <img style="width: 65%;border-radius: 10px;border: 3px solid #F9F4F4;" src="assets/imgs/Plastic.png" /></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding: 10px">
+    <ion-col size="3">
+      <ion-label class="follow">Follow us on </ion-label>
+    </ion-col>
+    <ion-col size="5" style="margin-left: -8px;">
+      <a href="https://www.facebook.com/amandeephospitals/"><img class="social-img"
+          src="assets/imgs/facebook-icon.png" /></a>
+      <a href="https://www.instagram.com/amandeephospitals/"><img class="social-img"
+          src="assets/imgs/instagram.png" /></a>
+      <a href="https://www.youtube.com/amandeephospital"><img class="social-img" src="assets/imgs/youtube.png" /></a>
+      <a href="https://twitter.com/amandeephspl"><img class="social-img" src="assets/imgs/twitter.png" /></a>
+      <a href="https://linkedin.com/company/amandeep-hospital"><img class="social-img"
+          src="assets/imgs/linkedin.png" /></a>
+    </ion-col>
+  </ion-row>
+
+  <!-- fab placed to the bottom end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button style="--background:transparent;--background-activated:transparent;--background-focused:transparent;--background-hover:transparent;--ripple-color:transparent">
+      <a href="tel:+919876002746" style="padding:6px"><img src="assets/imgs/Call ambulance.png" /></a>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
